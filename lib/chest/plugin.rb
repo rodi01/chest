@@ -9,8 +9,8 @@ module Chest
     attr_reader :name, :options
 
     SKETCH_APPSTORE = File.expand_path('~/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application Support/com.bohemiancoding.sketch3/Plugins')
-    SKETCH_BETA = File.expand_path('~/Library/Application Support/com.bohemiancoding.sketch3/Plugins')
-    PLUGINS_FOLDER_PATH = File.exist?(SKETCH_APPSTORE) ? SKETCH_APPSTORE : SKETCH_BETA
+    SKETCH_NONAPPSTORE= File.expand_path('~/Library/Application Support/com.bohemiancoding.sketch3/Plugins')
+    PLUGINS_FOLDER_PATH = SKETCH_NONAPPSTORE
 
     class InvalidArgumentError < StandardError; end
 
